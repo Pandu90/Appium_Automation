@@ -40,7 +40,11 @@
 			<artifactId>selenium-java</artifactId>
 			<version>3.9.1</version>
 		</dependency>
-
+		<dependency>
+    		<groupId>commons-io</groupId>
+    		<artifactId>commons-io</artifactId>
+    		<version>2.4</version>
+        </dependency>
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
@@ -60,9 +64,10 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>6.14.3</version>
-			<scope>test</scope>
-		</dependency>
+			<version>6.9.10</version>
+<!-- 			<scope>test</scope>
+			 -->		
+			 </dependency>
 		<dependency>
   			<groupId>com.google.guava</groupId>
   			<artifactId>guava</artifactId>
@@ -104,14 +109,15 @@
 				<version>${org.apache.maven.plugins.maven-surefire-plugin.version}</version>
 
 				<configuration>
-
+				
+					
+					
 					<suiteXmlFiles>
 
 						<suiteXmlFile>${testNG.suiteXmlFile}</suiteXmlFile>
 
 					</suiteXmlFiles>
 
-					
 				</configuration>
 
 				<executions>

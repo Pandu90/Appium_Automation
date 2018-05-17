@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[Application Lauched successfully |]]>
+    </line>
+    <line>
+      <![CDATA[Navigated to Sign in successfully | ]]>
+    </line>
+    <line>
+      <![CDATA[Successfully logged in | ]]>
+    </line>
+    <line>
+      <![CDATA[Product searched successfully | ]]>
+    </line>
+    <line>
+      <![CDATA[Product bought successfully ]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="76204" started-at="2018-05-17T13:25:34Z" finished-at="2018-05-17T13:26:50Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="76204" started-at="2018-05-17T13:25:34Z" finished-at="2018-05-17T13:26:50Z">
+      <class name="com.tests.AppiumTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.tests.AppiumTest@192b07fd]" name="beforeTest" is-config="true" duration-ms="41234" started-at="2018-05-17T18:55:34Z" finished-at="2018-05-17T18:56:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="validateProductCheckout()[pri:0, instance:com.tests.AppiumTest@192b07fd]" name="validateProductCheckout" duration-ms="33691" started-at="2018-05-17T18:56:15Z" finished-at="2018-05-17T18:56:49Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Application Lauched successfully |]]>
+            </line>
+            <line>
+              <![CDATA[Navigated to Sign in successfully | ]]>
+            </line>
+            <line>
+              <![CDATA[Successfully logged in | ]]>
+            </line>
+            <line>
+              <![CDATA[Product searched successfully | ]]>
+            </line>
+            <line>
+              <![CDATA[Product bought successfully ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateProductCheckout -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.tests.AppiumTest@192b07fd]" name="afterTest" is-config="true" duration-ms="1262" started-at="2018-05-17T18:56:49Z" finished-at="2018-05-17T18:56:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.tests.AppiumTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

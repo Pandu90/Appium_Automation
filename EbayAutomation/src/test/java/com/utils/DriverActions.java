@@ -93,8 +93,14 @@ public class DriverActions {
 		wait.until(ExpectedConditions.elementToBeClickable(locator));
 	}
 
-	protected void getText(By elementSelector) {
-		driver.findElement(elementSelector).getText();
+	protected String getText(By elementSelector) {
+		try{
+		String text = driver.findElement(elementSelector).getText();
+		return text;
+		}catch(Exception e){
+			return null;
+		}
+		
 	}
 
 	protected void getAssert(String textOne, String textTwo) {
