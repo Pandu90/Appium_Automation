@@ -1,10 +1,6 @@
 package com.tests;
 
-import java.net.MalformedURLException;
-
 import org.testng.Reporter;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.drivers.DriverSetup;
@@ -21,37 +17,33 @@ import com.pages.SignInPage;
  */
 
 public class AppiumTest extends DriverSetup {
+
+	/*
+	 * TestNG Test method to execute the automation flow of eBay app verify
+	 * product details scenario
+	 */
 	@Test
 	public void validateProductCheckout() {
 		try {
-			
+
 			Reporter.log("Application Lauched successfully |");
 			new EbayHomePage(driver).navigateSignIn();
 			Reporter.log("Navigated to Sign in successfully | ");
 			new SignInPage(driver).loginIn();
 			Reporter.log("Successfully logged in | ");
 			new SignInPage(driver).denyGoogleLinkRequest();
+			Reporter.log("Clicked on No Thanks button successfully | ");
 			new SearchPage(driver).searchProduct();
 			Reporter.log("Product searched successfully | ");
 			new PurchasePage(driver).verifyProductDetails();
-			Reporter.log("Product bought successfully ");
+			Reporter.log("Product details verified successfully ");
+
 		} catch (Exception e) {
 			System.out.println(e);
 			Reporter.log("Application Testing Failed with following error : " + e);
 		}
 	}
 
-	@BeforeTest
-	public void beforeTest() throws MalformedURLException {
-		// Calling initializing driver method for android testing.
-		initializeAppiumDriver();
-	}
-
-	@AfterTest
-	public void afterTest() {
-		// Quitting the Android driver and stopping appium server after everything is done.
-		driver.quit();
-		stopAppium();
-	}
+	
 
 }

@@ -17,10 +17,10 @@ import io.appium.java_client.AppiumDriver;
  */
 
 public class SignInPage extends DriverActions {
+	
 	By username = By.id("com.ebay.mobile:id/edit_text_username");
 	By password = By.id("com.ebay.mobile:id/edit_text_password");
 	By signInButton = By.id("com.ebay.mobile:id/button_sign_in");
-	
 	By noThanksButton = By.id("com.ebay.mobile:id/button_google_deny");
 	
 	@SuppressWarnings("rawtypes")

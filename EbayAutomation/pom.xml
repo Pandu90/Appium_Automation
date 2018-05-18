@@ -5,18 +5,11 @@
 	<artifactId>EbayAutomation</artifactId>
 	<version>1.0</version>
 
-
 	<properties>
-
 		<source.and.target.JVM.version>1.8</source.and.target.JVM.version>
-
 		<org.apache.maven.plugins.maven-compiler-plugin.version>3.5</org.apache.maven.plugins.maven-compiler-plugin.version>
-
 		<testNG.suiteXmlFile>src/test/resources/testng.xml</testNG.suiteXmlFile>
-		
 		<org.apache.maven.plugins.maven-surefire-plugin.version>2.19</org.apache.maven.plugins.maven-surefire-plugin.version>
-
-
 	</properties>
 
 	<dependencies>
@@ -25,31 +18,31 @@
 			<artifactId>java-client</artifactId>
 			<version>5.0.4</version>
 		</dependency>
-		<!-- <dependency>
-			<groupId>io.appium</groupId>
-			<artifactId>java-client</artifactId>
-			<version>5.0.0-BETA5</version>
-		</dependency> -->
+		
 		<dependency>
-    		<groupId>com.google.code.gson</groupId>
-    		<artifactId>gson</artifactId>
-    		<version>2.8.4</version>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.4</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>3.9.1</version>
 		</dependency>
+		
 		<dependency>
-    		<groupId>commons-io</groupId>
-    		<artifactId>commons-io</artifactId>
-    		<version>2.4</version>
-        </dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
 			<version>3.17</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
@@ -61,85 +54,51 @@
 			<artifactId>commons-collections4</artifactId>
 			<version>4.1</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.9.10</version>
-<!-- 			<scope>test</scope>
-			 -->		
-			 </dependency>
-		<dependency>
-  			<groupId>com.google.guava</groupId>
-  			<artifactId>guava</artifactId>
-  			<version>24.0-jre</version>
+			<!-- <scope>test</scope> -->
 		</dependency>
-
+		
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>24.0-jre</version>
+		</dependency>
 	</dependencies>
 
 	<build>
-
 		<plugins>
-
 			<plugin>
-
 				<groupId>org.apache.maven.plugins</groupId>
-
 				<artifactId>maven-compiler-plugin</artifactId>
-
 				<version>${org.apache.maven.plugins.maven-compiler-plugin.version}</version>
-
 				<configuration>
-
 					<encoding>UTF-8</encoding>
-
 					<source>${source.and.target.JVM.version}</source>
-
 					<target>${source.and.target.JVM.version}</target>
-
 				</configuration>
-
 			</plugin>
-
 			<plugin>
-
 				<groupId>org.apache.maven.plugins</groupId>
-
 				<artifactId>maven-surefire-plugin</artifactId>
-
 				<version>${org.apache.maven.plugins.maven-surefire-plugin.version}</version>
-
 				<configuration>
-				
-					
-					
 					<suiteXmlFiles>
-
 						<suiteXmlFile>${testNG.suiteXmlFile}</suiteXmlFile>
-
 					</suiteXmlFiles>
-
 				</configuration>
-
 				<executions>
-
 					<execution>
-
 						<phase>integration-test</phase>
-
 						<goals>
-
 							<goal>test</goal>
-
 						</goals>
-
 					</execution>
-
 				</executions>
-
 			</plugin>
-
 		</plugins>
-
 	</build>
-
 </project>

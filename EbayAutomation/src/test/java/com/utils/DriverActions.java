@@ -12,16 +12,18 @@ import org.testng.Assert;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
-import io.appium.java_client.android.AndroidKeyCode;
 
 /**
- * Class for all the performing actions int the device. Contains methods for
+ * Class for all the performing actions in the device. Contains methods for
  * performing actions like sendkeys, click, wait, swiping, assert, rotation etc.
- 
+ * 
+ * @author Pandu
+ * @email pandurangang.gangatharan.k@cognizant.com
  */
 
 @SuppressWarnings("rawtypes")
 public class DriverActions {
+	
 	protected AppiumDriver driver;
 
 	public DriverActions(AppiumDriver driver) {
@@ -32,22 +34,21 @@ public class DriverActions {
 		driver.findElement(elementSelector).click();
 	}
 
-	@SuppressWarnings("deprecation")
-	protected void tapOnElement(int x,int y) {
+	protected void tapOnElement(int x, int y) {
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.tap(x, y).perform();
 	}
-	
+
 	protected void sendKeysToElement(By elementSelector, String value) {
 		driver.findElement(elementSelector).sendKeys(value);
 	}
-	
+
 	protected void clickOnEnter() {
-		//driver.press_keycode(66);
+		// driver.press_keycode(66);
 	}
-	
-	
-	protected  List<WebElement> getAllElements(By elementSelector){
+
+	@SuppressWarnings("unchecked")
+	protected List<WebElement> getAllElements(By elementSelector) {
 		List<WebElement> childElements = driver.findElements(By.className("android.view.View"));
 		return childElements;
 	}
@@ -67,25 +68,24 @@ public class DriverActions {
 		}
 		driver.rotate(position);
 	}
-	
+
 	protected String getOrientation() {
 		return driver.getOrientation().value();
 	}
 
-	@SuppressWarnings("deprecation")
 	protected void swipeScreen(int xStart, int yStart, int xEnd, int yEnd) {
 		TouchAction touchAction = new TouchAction(driver);
 		touchAction.press(xStart, yStart).moveTo(xEnd, xEnd).release().perform();
 	}
 
 	protected void waitForVisibilityOf(By locator, long timeOutSeconds) {
-		try{
+		try {
 			WebDriverWait wait = new WebDriverWait(driver, timeOutSeconds);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-		}catch(Exception e){
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
 
 	protected void waitForClickabilityOf(By locator, long timeOutSeconds) {
@@ -94,17 +94,22 @@ public class DriverActions {
 	}
 
 	protected String getText(By elementSelector) {
-		try{
-		String text = driver.findElement(elementSelector).getText();
-		return text;
-		}catch(Exception e){
+		try {
+			String text = driver.findElement(elementSelector).getText();
+			return text;
+		} catch (Exception e) {
 			return null;
 		}
-		
+
 	}
 
-	protected void getAssert(String textOne, String textTwo) {
-		Assert.assertEquals(textOne, textTwo);
+	protected void validateResult(String textOne, String textTwo) {
+		try {
+			Assert.assertEquals(textOne, textTwo);
+		} catch (Exception e) {
+			System.out.println("Exception occured");
+		}
+
 	}
 
 	protected void implicitWait(int waitTime) {

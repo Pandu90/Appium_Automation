@@ -6,7 +6,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+/*
+ * Class to read values from properties file
+ * 
+ * @author Pandu
+ * @email pandurangang.gangatharan.k@cognizant.com
+ */
 public class PropertiesClass {
+	
 	static Properties properties = new Properties();
 
 	public PropertiesClass() {

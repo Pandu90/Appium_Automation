@@ -13,6 +13,7 @@ import io.appium.java_client.AppiumDriver;
  */
 
 public class EbayHomePage extends DriverActions {
+	
 	By sideMenu = By.id("com.ebay.mobile:id/home");
 	By signIn = By.id("com.ebay.mobile:id/home");
 
@@ -21,8 +22,12 @@ public class EbayHomePage extends DriverActions {
 		super(driver);
 	}
 
+	/**
+	 * Java method to automate the navigate to sign in page flow
+	 */
 	public void navigateSignIn() {
-		if(getOrientation()=="landscape") {
+		
+		if (getOrientation() == "landscape") {
 			rotateScreen("portrait");
 		}
 		clickOnElement(sideMenu);

@@ -11,22 +11,29 @@
       <![CDATA[Successfully logged in | ]]>
     </line>
     <line>
+      <![CDATA[Clicked on No Thanks button successfully | ]]>
+    </line>
+    <line>
       <![CDATA[Product searched successfully | ]]>
     </line>
     <line>
-      <![CDATA[Product bought successfully ]]>
+      <![CDATA[Product details verified successfully ]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="76204" started-at="2018-05-17T13:25:34Z" finished-at="2018-05-17T13:26:50Z">
+  <suite name="Default suite" duration-ms="85669" started-at="2018-05-18T05:21:15Z" finished-at="2018-05-18T05:22:41Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="76204" started-at="2018-05-17T13:25:34Z" finished-at="2018-05-17T13:26:50Z">
+    <test name="Default test" duration-ms="85669" started-at="2018-05-18T05:21:15Z" finished-at="2018-05-18T05:22:41Z">
       <class name="com.tests.AppiumTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.tests.AppiumTest@192b07fd]" name="beforeTest" is-config="true" duration-ms="41234" started-at="2018-05-17T18:55:34Z" finished-at="2018-05-17T18:56:15Z">
+        <test-method status="PASS" signature="beforeTestSuite()[pri:0, instance:com.tests.AppiumTest@64bf3bbf]" name="beforeTestSuite" is-config="true" duration-ms="6483" started-at="2018-05-18T10:51:09Z" finished-at="2018-05-18T10:51:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestSuite -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.tests.AppiumTest@64bf3bbf]" name="beforeTest" is-config="true" duration-ms="40567" started-at="2018-05-18T10:51:15Z" finished-at="2018-05-18T10:51:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="validateProductCheckout()[pri:0, instance:com.tests.AppiumTest@192b07fd]" name="validateProductCheckout" duration-ms="33691" started-at="2018-05-17T18:56:15Z" finished-at="2018-05-17T18:56:49Z">
+        <test-method status="PASS" signature="validateProductCheckout()[pri:0, instance:com.tests.AppiumTest@64bf3bbf]" name="validateProductCheckout" duration-ms="43608" started-at="2018-05-18T10:51:56Z" finished-at="2018-05-18T10:52:40Z">
           <reporter-output>
             <line>
               <![CDATA[Application Lauched successfully |]]>
@@ -38,17 +45,24 @@
               <![CDATA[Successfully logged in | ]]>
             </line>
             <line>
+              <![CDATA[Clicked on No Thanks button successfully | ]]>
+            </line>
+            <line>
               <![CDATA[Product searched successfully | ]]>
             </line>
             <line>
-              <![CDATA[Product bought successfully ]]>
+              <![CDATA[Product details verified successfully ]]>
             </line>
           </reporter-output>
         </test-method> <!-- validateProductCheckout -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.tests.AppiumTest@192b07fd]" name="afterTest" is-config="true" duration-ms="1262" started-at="2018-05-17T18:56:49Z" finished-at="2018-05-17T18:56:50Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.tests.AppiumTest@64bf3bbf]" name="afterTest" is-config="true" duration-ms="1482" started-at="2018-05-18T10:52:40Z" finished-at="2018-05-18T10:52:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="AfterTestSuite()[pri:0, instance:com.tests.AppiumTest@64bf3bbf]" name="AfterTestSuite" is-config="true" duration-ms="81" started-at="2018-05-18T10:52:41Z" finished-at="2018-05-18T10:52:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTestSuite -->
       </class> <!-- com.tests.AppiumTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

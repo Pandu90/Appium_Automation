@@ -1,7 +1,5 @@
 package com.utils;
 
-
-
 import java.io.FileInputStream;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -10,9 +8,13 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 /**
  * Class for reading data from excel.
  * 
+ * @author Pandu
+ * @email pandurangang.gangatharan.k@cognizant.com
  */
 
 public class ExcelUtils {
+	
+	
 	private static XSSFSheet ExcelWSheet;
 	private static XSSFWorkbook ExcelWBook;
 	private static XSSFCell Cell;

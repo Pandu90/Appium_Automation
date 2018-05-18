@@ -2,16 +2,12 @@ package com.pages;
 
 
 
-import java.util.List;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 import com.utils.DriverActions;
 import com.utils.ExcelUtils;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidKeyCode;
 
 /**
  * Page object model Class for search screen. Contains methods for searching the
@@ -38,7 +34,11 @@ public class PurchasePage extends DriverActions {
 		ExcelUtils.setExcelFile("datasheet.xlsx", "search_product");
 	}
 
+	/*
+	 * Java method to automate the searched product details verification flow
+	 */
 	public void verifyProductDetails() throws Exception {
+		
 		if(getOrientation()=="landscape") {
 			rotateScreen("portrait");
 		}
@@ -49,8 +49,8 @@ public class PurchasePage extends DriverActions {
 		
 		System.out.println(itemTitle_str +" and "+itemPrice_str);
 		
-		getAssert(itemTitle_str,SearchPage.productTitle_str);
-		getAssert(itemPrice_str,SearchPage.productPrice_str);
+		validateResult(itemTitle_str,SearchPage.productTitle_str);
+		validateResult(itemPrice_str,SearchPage.productPrice_str);
 	}
 
 }
